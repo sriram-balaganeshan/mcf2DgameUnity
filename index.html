@@ -14,9 +14,7 @@
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full">
-            
-          </div>
+          <div id="unity-progress-bar-full"></div>
         </div>
       </div>
       <div id="unity-warning"> </div>
@@ -101,48 +99,6 @@
         });
       };
       document.body.appendChild(script);
-
-       <!-- Keyboard Input System -->
- 
-            const keyboardInput = document.getElementById('keyboardInput');
-            const unityCanvas = document.getElementById('unity-canvas');
-        
-            window.showKeyboard = false;
-            let firstClick = false;
-            unityCanvas.addEventListener('click', async function acceptFirstClick() {
-
-              if(firstClick) return;
-
-              firstClick = true;
-
-              while(true)
-              {
-                if(window.showKeyboard)
-                {
-                  window.showKeyboard = false;
-
-                  keyboardInput.focus(); // calling mobile keyboard
-                }
-
-                await new Promise(r=>setTimeout(r,400));
-              }
-
-              
-            });
-
-            document.body.addEventListener('input', e => {
-              if (e.inputType == "deleteContentBackward" || (e.inputType == 'insertCompositionText' && e.data == null)) {
-                window.unityInstance.SendMessage('InputReceiver', 'Backspace');
-              }
-              else if (e.data == null) {
-                return;               
-              }
-              else if (e.data.length > 0) {
-                window.unityInstance.SendMessage('InputReceiver', 'AcceptInput', e.data[e.data.length - 1]);
-              }
-            });
-            
-            
-        </script>
+    </script>
   </body>
 </html>
