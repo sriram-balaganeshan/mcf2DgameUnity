@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>MCFACEY GAME | MCF</title>
+    <title>Unity WebGL Player | MCF</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <div id="unity-container">
-      <canvas id="unity-canvas" width=920 height=1240 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=414 height=896 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/New folder (2).loader.js";
+      var loaderUrl = buildUrl + "/MCF_Buid.loader.js";
       var config = {
-        dataUrl: buildUrl + "/New folder (2).data",
-        frameworkUrl: buildUrl + "/New folder (2).framework.js",
-        codeUrl: buildUrl + "/New folder (2).wasm",
+        dataUrl: buildUrl + "/MCF_Buid.data",
+        frameworkUrl: buildUrl + "/MCF_Buid.framework.js",
+        codeUrl: buildUrl + "/MCF_Buid.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Approlabs",
         productName: "MCF",
@@ -84,7 +84,7 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
 
-      canvas.style.background = "url('" + buildUrl + "/New folder (2).jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/MCF_Buid.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");

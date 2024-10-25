@@ -1,9 +1,9 @@
 const cacheName = "Approlabs-MCF-1.0";
 const contentToCache = [
-    "Build/New folder (2).loader.js",
-    "Build/New folder (2).framework.js",
-    "Build/New folder (2).data",
-    "Build/New folder (2).wasm",
+    "Build/MCF_Buid.loader.js",
+    "Build/MCF_Buid.framework.js",
+    "Build/MCF_Buid.data",
+    "Build/MCF_Buid.wasm",
     "TemplateData/style.css"
 
 ];
